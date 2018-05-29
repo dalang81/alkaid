@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.lilianinfo.cloud</groupId>
+		<artifactId>icu-management</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>icu-management-service</artifactId>
+	<packaging>jar</packaging>
+
+	<name>icu-management-service</name>
+	<description>icu-management-service project for Spring Boot</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.lilianinfo.cloud</groupId>
+			<artifactId>icu-management-dao</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+	        <groupId>com.aliyun.mns</groupId>
+	        <artifactId>aliyun-sdk-mns</artifactId>
+	        <version>1.1.8</version>
+	        <classifier>jar-with-dependencies</classifier>
+    	</dependency>
+    	
+		<dependency>
+			<groupId>com.lilianinfo.cloud.common.framework</groupId>
+			<artifactId>common-framework-service</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<!-- 打包插件，其中repackage、true是专门打spring boot专用包-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

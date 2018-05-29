@@ -1,0 +1,10 @@
+/RemoteSystemsTempFiles
+*.project
+*.classpath
+target
+*.bak
+.settings
+/.metadata/
+/.idea/
+/common-service/common-service-config/*.springBeans
+/common-framework/common-framework-dao/*.factorypath

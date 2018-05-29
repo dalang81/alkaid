@@ -1,0 +1,29 @@
+spring: 
+  cloud:
+    config:
+      name: user-management
+      profile: dev,discoveryClient
+      discovery: 
+        enabled: true
+        service-id: common-service-config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://lilianinfo:123456@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      weight: 11
+logging:
+  level:
+    root: INFO
+    com.lilianinfo: DEBUG
+    org.springframework.security: INFO
+
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
