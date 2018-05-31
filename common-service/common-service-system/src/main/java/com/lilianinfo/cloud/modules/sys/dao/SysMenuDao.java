@@ -3,6 +3,7 @@ package com.lilianinfo.cloud.modules.sys.dao;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.lilianinfo.cloud.modules.sys.entity.SysMenuEntity;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  *  
  * @date 2016年9月18日 上午9:33:01
  */
+@Repository
 @Mapper
 public interface SysMenuDao extends BaseDao<SysMenuEntity> {
 	

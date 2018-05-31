@@ -3,6 +3,7 @@ package com.lilianinfo.cloud.modules.sys.dao;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.lilianinfo.cloud.modules.sys.entity.SysRoleDeptEntity;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  *  
  * @date 2017年6月21日 23:33:46
  */
+@Repository
 @Mapper
 public interface SysRoleDeptDao extends BaseDao<SysRoleDeptEntity> {
 	
