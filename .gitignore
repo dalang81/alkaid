@@ -8,3 +8,4 @@ target
 /.idea/
 /common-service/common-service-config/*.springBeans
 /common-framework/common-framework-dao/*.factorypath
+/common-service/common-service-system/.factorypath

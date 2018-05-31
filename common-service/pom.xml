@@ -20,6 +20,7 @@
 	<modules>
 		<module>common-service-eureka</module>
 		<module>common-service-config</module>
+		<module>common-service-system</module>
 	</modules>
 
 	<!-- spring io 版本聚合管理应用，只是一个 pom 文件。
